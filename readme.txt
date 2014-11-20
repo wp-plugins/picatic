@@ -11,9 +11,13 @@ Integrate your Picatic event into your WordPress site.
 
 == Description ==
 
-The Picatic plugin is a simple way to display your upcoming Picatic events on your WordPress site.
+The Picatic plugin is a simple way to sell tickets with WordPress. You can also display a list of your Picatic events on your WordPress post or website.
 
-The plugin was designed for event organizers, like you, to create a professional and custom events listing page.
+The plugin was designed for event organizers, like you, to create a professional and custom events listing page. An embeddable widget also allows you to sell tickets to your Picatic events right from your WordPress site.
+
+To use the Picatic WordPress plugin, first you’ll need a Picatic account. [Sign up for free](https://www.picatic.com/manage/users/login#/register?utm_source=wordpress&utm_medium=integrations&utm_campaign=picatic%20for%20wordpress "Sign up for a free account")
+
+Not familiar with Picatic? Visit our website to [learn more](https://www.picatic.com/?utm_source=wordpress&utm_medium=integrations&utm_campaign=picatic%20for%20wordpress "Learn more about Picatic").
 
 Features Included:
 
