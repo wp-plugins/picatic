@@ -1,0 +1,247 @@
+/* ==========================================================================
+  Picatic Upcoming Events Widget Styles
+========================================================================== */
+/* ==========================================================================
+
+  TABLE OF CONTENTS
+
+  00 - Base
+  01 - Event Box
+  02 - Mobile
+
+========================================================================== */
+/* ==========================================================================
+  00 - Base
+========================================================================== */
+  .pt-upcoming-events:before,
+  .pt-upcoming-events:after {
+    content: " ";
+    display: table;
+  }
+  .pt-upcoming-events:after {
+    clear: both;
+  }
+
+
+/* ==========================================================================
+  01 - Event Box
+========================================================================== */
+  .pt-event-box, .pt-event-box * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .pt-event-box {
+    background-color: #fff;
+    border: 1px solid #c7c7c7;
+    border-radius: 5px;
+    color: #535353;
+    float: left;
+    font-family: 'ProximaNovaRgRegular', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    height: 320px;
+    overflow: hidden;
+    position: relative;
+    width: 220px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .pt-event-box:hover {
+    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  }
+  .pt-event-box-img {
+    height: 87px;
+    overflow: hidden;
+    position: relative;
+  }
+  .pt-event-box-img img {
+    border-radius: 4px 4px 0 0;
+    display: block;
+    width: 100%;
+  }
+  .pt-event-box-content {
+    background-color: transparent;
+    height: 194px;
+    margin-top: 5px;
+    overflow: hidden;
+    padding: 0 10px;
+    position: relative;
+  }
+  .pt-event-box-title {
+    color: #555555;
+    font-size: 14px !important;
+    letter-spacing: 0;
+    line-height: 1.42857143;
+    margin: 8px 0 8px !important;
+    overflow: hidden;
+    font-family: 'ProximaNovaRgBold';
+    font-weight: normal;
+    font-style: normal;
+  }
+  .pt-event-box .pt-event-box-content .pt-event-box-title a {
+    color: #222222;
+    display: block;
+    text-decoration: none;
+  }
+  .pt-event-box-title:hover {
+    color: #f58301;
+    cursor: pointer;
+  }
+  .pt-event-box-desc {
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 12px;
+  }
+  .pt-event-box-date {
+    border-top: 1px solid #eeeeee;
+    bottom: 0;
+    color: rgba(0, 0, 0, 0.54);
+    margin: 0;
+    padding: 10px 8px 5px 10px;
+    position: absolute;
+    width: 100%;
+  }
+  .pt-event-box-date div {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .pt-icon-calendar,
+  .pt-icon-venue {
+    background-color: transparent;
+    background-position: 0 1px;
+    background-repeat: no-repeat;
+    clear: both;
+    display: inline-block;
+    float: left;
+    height: 16px;
+    vertical-align: middle;
+    width: 12px;
+  }
+  .pt-icon-calendar {
+    background-image: url(../images/icon-calendar.png);
+  }
+  .pt-icon-venue {
+    background-image: url(../images/icon-location.png);
+  }
+  .pt-event-box-date div span {
+    display: block;
+    margin-left: 16px;
+  }
+  .pt-event-box-funding-area {
+    background: #f8f8f8;
+    border-top: 1px solid #ddd;
+    bottom: 0;
+    height: 94px;
+    margin: 10px -10px 0;
+    padding: 16px 0 12px;
+    position: absolute;
+    width: 100%;
+  }
+  .pt-event-box-countdown-success {
+    color: #00be9c;
+    font-size: 14px;
+    line-height: 23px;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'ProximaNovaRgBold';
+    font-weight: normal;
+    font-style: normal;
+  }
+  .pt-event-box-countdown-failure {
+    color: #aeaca2;
+    font-size: 14px;
+    line-height: 23px;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'ProximaNovaLtBold';
+    font-weight: normal;
+    font-style: normal;
+  }
+  .pt-event-box-tickets-left {
+    font-size: 11px;
+    margin-right: 10px;
+    padding-bottom: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'ProximaNovaRgBold';
+    font-weight: normal;
+    font-style: normal;
+  }
+  .pt-event-box-tilt-progress.progress {
+    background: none #ddd;
+    border-radius: 5px;
+    clear: both;
+    height: 5px;
+    margin: 0 10px 3px;
+    overflow: hidden;
+  }
+  .pt-event-box-tilt-progress.progress .bar {
+    background: none #00be9c;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 12px;
+    height: 9px;
+    margin-top: -2px;
+    max-width: 100%;
+    text-align: center;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    width: 0%;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    -webkit-transition: width 0.6s ease;
+    -o-transition: width 0.6s ease;
+    transition: width 0.6s ease;
+  }
+  .pt-event-box-cf-info {
+    font-size: 12px;
+    padding-top: 5px;
+  }
+  .pt-event-box-cf-info:before,
+  .pt-event-box-cf-info:after {
+    content: " ";
+    display: table;
+  }
+  .pt-event-box-cf-info:after {
+    clear: both;
+  }
+  .pt-event-box-cf-info div {
+    float: left;
+    line-height: 14px;
+    text-align: center;
+  }
+  .pt-event-box-cf-info span {
+    color: #000000;
+    font-size: 14px;
+    display: block;
+    font-family: 'ProximaNovaRgBold';
+    font-weight: normal;
+    font-style: normal;
+  }
+  .pt-event-box-cf-funded {
+    width: 26%;
+  }
+  .pt-event-box-cf-contributors {
+    width: 40%;
+  }
+  .pt-event-box-cf-time {
+    width: 34%;
+  }
+  .cf-event-box .pt-event-box-date {
+    border-top: none;
+    bottom: 95px;
+  }
+  .cf-event-box .pt-event-box-funding-area {
+    margin: 0;
+  }
+
+
+/* ==========================================================================
+  02 - Mobile
+========================================================================== */
