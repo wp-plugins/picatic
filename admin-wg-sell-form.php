@@ -69,8 +69,8 @@ if ( ! defined( 'ABSPATH' ) )
   <?php
       $light_class = '';
       $dark_class = 'ptw-dark';
-      echo '<option value= "' . $light_class . '"' . selected( $theme_options , $light_class ) . '> Light theme </option>'; // light theme
-      echo '<option value= "' . $dark_class . '"' . selected( $theme_options , $dark_class ) . '> Dark theme </option>'; // dark theme
+      echo '<option value= "' . $light_class . '"' . selected( $theme_options , $light_class ) . '> ' . __('Light theme', 'Picatic_Sell_Tickets_Widget_plugin') . ' </option>'; // light theme
+      echo '<option value= "' . $dark_class . '"' . selected( $theme_options , $dark_class ) . '> ' . __('Dark theme', 'Picatic_Sell_Tickets_Widget_plugin') . ' </option>'; // dark theme
   ?>
   </select>
   </p>

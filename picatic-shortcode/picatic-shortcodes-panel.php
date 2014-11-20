@@ -111,8 +111,8 @@
     <div class="tabs">
       <div class="tab-header">
         <ul class="tab-links">
-          <li class="active"><a href="#tab1">Sell Tickets</a></li>
-          <li><a href="#tab2">Upcoming Events</a></li>
+          <li class="active"><a href="#tab1"><?php _e('Sell Tickets', 'Picatic_Sell_Tickets_Widget_plugin'); ?></a></li>
+          <li><a href="#tab2"><?php _e('Upcoming Events', 'Picatic_Sell_Tickets_Widget_plugin'); ?></a></li>
         </ul><!-- /.tab-links -->
       </div>
 
@@ -122,56 +122,68 @@
 
             <?php
             // get Picatic Options
-            $getOptions = get_option( 'picatic-settings' );
+            $getOptions = get_option( 'picatic_settings' );
             $userid =  $getOptions['user_id'];
 
             $allEvents = PicaticLib::getEventsForUserShort();
             ?>
 
-            <p><strong>Event</strong></p>
-            <div class="form-group">
-              <select id="event" name="event" class="" required="required">
-              <?php foreach ($allEvents as $theEvent) { ?>
-                <option value="<?php echo $theEvent['id'] ?>"><?php echo $theEvent['title'] ?></option>
-              <?php } ?>
-              </select>
-            </div><!-- /.form-group -->
+            <?php if ( !empty($userid) ) { ?>
+              <p><strong><?php _e('Event', 'Picatic_Sell_Tickets_Widget_plugin'); ?></strong></p>
+              <div class="form-group">
+                <select id="event" name="event" class="" required="required">
+                <?php foreach ($allEvents as $theEvent) { ?>
+                  <option value="<?php echo $theEvent['id'] ?>"><?php echo $theEvent['title'] ?></option>
+                <?php } ?>
+                </select>
+              </div><!-- /.form-group -->
 
-            <p><strong>Options</strong></p>
-            <div class="form-group">
-              <label class="block">
-                <input type="checkbox" id="show_title" name="show_title" value="no">
-                Show Event Title
-              </label>
-              <label class="block">
-                <input type="checkbox" id="show_desc" name="show_desc" value="no">
-                Show Ticket Description
-              </label>
-            </div><!-- /.form-group -->
+              <p><strong><?php _e('Options', 'Picatic_Sell_Tickets_Widget_plugin'); ?></strong></p>
+              <div class="form-group">
+                <label class="block">
+                  <input type="checkbox" id="show_title" name="show_title" value="no">
+                  <?php _e('Show Event Title', 'Picatic_Sell_Tickets_Widget_plugin'); ?>
+                </label>
+                <label class="block">
+                  <input type="checkbox" id="show_desc" name="show_desc" value="no">
+                  <?php _e('Show Ticket Description', 'Picatic_Sell_Tickets_Widget_plugin'); ?>
+                </label>
+              </div><!-- /.form-group -->
 
-            <p><strong><?php _e('Widget Theme', 'Picatic_Sell_Tickets_Widget_plugin'); ?></strong></p>
-            <div class="form-group">
-              <select id="theme_options" name="theme_options">
-                <option value="ptw-light">Light Theme</option>
-                <option value="ptw-dark">Dark Theme</option>
-              </select>
-            </div><!-- /.form-group -->
+              <p><strong><?php _e('Widget Theme', 'Picatic_Sell_Tickets_Widget_plugin'); ?></strong></p>
+              <div class="form-group">
+                <select id="theme_options" name="theme_options">
+                  <option value="ptw-light"><?php _e('Light Theme', 'Picatic_Sell_Tickets_Widget_plugin'); ?></option>
+                  <option value="ptw-dark"><?php _e('Dark Theme', 'Picatic_Sell_Tickets_Widget_plugin'); ?></option>
+                </select>
+              </div><!-- /.form-group -->
 
-            <div class="tab-footer">
-              <a href="javascript:ButtonDialog.insert(ButtonDialog.local_ed)" id="insert" >Insert Shortcode</a>
-            </div><!-- /.tab-footer -->
+              <div class="tab-footer">
+                <a href="javascript:ButtonDialog.insert(ButtonDialog.local_ed)" id="insert" >Insert Shortcode</a>
+              </div><!-- /.tab-footer -->
+            <?php } else { ?>
+              <h3><?php _e('Sell Tickets Shortcode', 'Picatic_Sell_Tickets_Widget_plugin'); ?></h3>
+              <p><?php _e('In order to use this shortcode, you must authenticate yourself with the Picatic plugin using an API key from Picatic.', 'Picatic_Sell_Tickets_Widget_plugin'); ?></p>
+              <p><?php _e('Go to the Picatic Options page to set your API key.', 'Picatic_Sell_Tickets_Widget_plugin'); ?></p>
+            <?php } ?>
           </form>
         </div><!-- /.tab -->
 
         <div id="tab2" class="tab">
-          <form action="">
-            <input type="hidden" id="userid" name="userid" value="<?php echo $userid ?>"/>
-            <h3>Upcoming Events Shortcode</h3>
-            <p>[picatic-upcoming-events][/picatic-upcoming-events]</p>
-            <div class="tab-footer">
-              <a href="javascript:ButtonDialog2.insert(ButtonDialog2.local_ed)" id="insert">Insert Shortcode</a>
-            </div><!-- /.tab-footer -->
-          </form>
+          <?php if ( !empty($userid) ) { ?>
+            <form action="">
+              <input type="hidden" id="userid" name="userid" value="<?php echo $userid ?>"/>
+              <h3><?php _e('Upcoming Events Shortcode', 'Picatic_Sell_Tickets_Widget_plugin'); ?></h3>
+              <p>[picatic-upcoming-events][/picatic-upcoming-events]</p>
+              <div class="tab-footer">
+                <a href="javascript:ButtonDialog2.insert(ButtonDialog2.local_ed)" id="insert">Insert Shortcode</a>
+              </div><!-- /.tab-footer -->
+            </form>
+          <?php } else { ?>
+            <h3><?php _e('Upcoming Events Shortcode', 'Picatic_Sell_Tickets_Widget_plugin'); ?></h3>
+            <p><?php _e('In order to use this shortcode, you must authenticate yourself with the Picatic plugin using an API key from Picatic.', 'Picatic_Sell_Tickets_Widget_plugin'); ?></p>
+            <p><?php _e('Go to the Picatic Options page to set your API key.', 'Picatic_Sell_Tickets_Widget_plugin'); ?></p>
+          <?php } ?>
         </div><!-- /.tab -->
       </div><!-- /.tab-content -->
 

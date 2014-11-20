@@ -23,7 +23,7 @@ if (!isset($theme_options)) {
 <?php
 
 // get Picatic Options
-$getOptions = get_option( 'picatic-settings' );
+$getOptions = get_option( 'picatic_settings' );
 $userid =  $getOptions['user_id'];
 
 $theEvent = PicaticLib::getEvent($event);
@@ -36,7 +36,7 @@ $widget_settings = get_option( 'widget_picatic_sell_tickets_widget' );
 ?>
 
   <h1 <?php if($show_event_title != 1 && $title != "yes") echo 'style=display:none;' ?>><?php echo $theEvent['title']; ?></h1>
-  <h2>Select your tickets</h2>
+  <h2><?php _e('Select your tickets', 'Picatic_Sell_Tickets_Widget_plugin'); ?></h2>
   <hr>
   <div class="ptw-ticket-block">
     <form action="<?php echo 'https://www.picatic.com/' . $theEvent['slug'] . '/checkout'; ?>" target="_blank" id="TicketPurchaseWidgetForm" method="post" accept-charset="utf-8" class="">
@@ -46,9 +46,9 @@ $widget_settings = get_option( 'widget_picatic_sell_tickets_widget' );
       <table class="ptw-table">
         <thead>
           <tr>
-            <th>Description</th>
-            <th>Price</th>
-            <th>Quantity</th>
+            <th><?php _e('Description', 'Picatic_Sell_Tickets_Widget_plugin'); ?></th>
+            <th><?php _e('Price', 'Picatic_Sell_Tickets_Widget_plugin'); ?></th>
+            <th><?php _e('Quantity', 'Picatic_Sell_Tickets_Widget_plugin'); ?></th>
           </tr>
         </thead>
         <tbody>
@@ -64,7 +64,7 @@ $widget_settings = get_option( 'widget_picatic_sell_tickets_widget' );
             }
             if($currentTicket['status'] !== 'hidden') {
               if ($currentTicket['price'] == 0) {
-                $price = "Free";
+                $price = __('Free', 'Picatic_Sell_Tickets_Widget_plugin');
               } else{
                 if ( !empty($currentTicket['_ticket_price_discount']) && $currentTicket['_ticket_price_discount'][0]['type'] === 'crowd_funded' ) {
                   $price = "".PicaticLib::currencySymbol($theEvent['_currency']['code'])."".$currentTicket['_ticket_price_discount'][0]['amount'];
@@ -90,7 +90,7 @@ $widget_settings = get_option( 'widget_picatic_sell_tickets_widget' );
                       </span>
                       <?php
                       if ( $currentTicket['taxable'] === true ) {
-                        echo ' + TAX';
+                        echo ' + ' . __('TAX', 'Picatic_Sell_Tickets_Widget_plugin');
                       }
                       ?>
                   </span>
@@ -108,7 +108,7 @@ $widget_settings = get_option( 'widget_picatic_sell_tickets_widget' );
                       <?php } ?>
                       </select>
                     <?php } else { ?>
-                      CLOSED
+                      <?php _e('CLOSED', 'Picatic_Sell_Tickets_Widget_plugin'); ?>
                     <?php } ?>
                   </div><!-- /.ptw-wide-ticket-quantity -->
                 </td>
@@ -126,7 +126,7 @@ $widget_settings = get_option( 'widget_picatic_sell_tickets_widget' );
                   }
                   if ( $currentTicket['type'] == 'crowd_funded' && !empty($currentTicket['perk']) ) { ?>
                     <div class="ptw-wide-ticket-perk">
-                      <span class="perk-title">Added Perk:</span> <?php echo $currentTicket['perk']; ?>
+                      <span class="perk-title"><?php _e('Added Perk', 'Picatic_Sell_Tickets_Widget_plugin'); ?>:</span> <?php echo $currentTicket['perk']; ?>
                     </div><!-- /.ptw-wide-ticket-perk -->
                   <?php } ?>
                   </td>
@@ -145,7 +145,7 @@ $widget_settings = get_option( 'widget_picatic_sell_tickets_widget' );
         <table class="ptw-table">
           <tbody>
             <tr class="no-border top-padding-6">
-              <td class="ptw-wide-ticket-name">Donation</td>
+              <td class="ptw-wide-ticket-name"><?php _e('Donation', 'Picatic_Sell_Tickets_Widget_plugin'); ?></td>
               <td class="align-right">
                 <div class="input-prepend">
                   <span class="add-on">$</span><input type="text" name="data[Donation][amount]" class="input-mini" />
@@ -172,7 +172,7 @@ $widget_settings = get_option( 'widget_picatic_sell_tickets_widget' );
         <table class="ptw-table">
           <tbody>
             <tr class="no-border top-padding-6">
-              <td class="ptw-wide-ticket-name">Promo Code:<br></td>
+              <td class="ptw-wide-ticket-name"><?php _e('Promo Code', 'Picatic_Sell_Tickets_Widget_plugin'); ?>:<br></td>
               <td class="align-right">
                 <div class="input-append promo-code-input relative">
                   <input id="url" type="hidden" value="<?php echo "https://www.picatic.com/" . $theEvent['slug'] . "?code=" ?>"/>
@@ -186,9 +186,9 @@ $widget_settings = get_option( 'widget_picatic_sell_tickets_widget' );
 
       <?php if ( $theEvent['status'] == 'active' ) { ?>
         <div class="clearfix">
-          <button type="submit" class="btn btn-teal pull-right">Buy Now</button>
+          <button type="submit" class="btn btn-teal pull-right"><?php _e('Buy Now', 'Picatic_Sell_Tickets_Widget_plugin'); ?></button>
           <div class="ptw-powered-by">
-            Powered by <a href="https://www.picatic.com/" style="color: #535353" target="_blank"><img src="<?php echo plugins_url( 'images/picatic-logo-flat.png', __FILE__ ); ?>" alt="Picatic"></a>
+            <?php _e('Powered by', 'Picatic_Sell_Tickets_Widget_plugin'); ?> <a href="https://www.picatic.com/" style="color: #535353" target="_blank"><img src="<?php echo plugins_url( 'images/picatic-logo-flat.png', __FILE__ ); ?>" alt="Picatic"></a>
           </div><!-- /.ptw-powered-by -->
         </div><!-- /.clearfix -->
       <?php } ?>

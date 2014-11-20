@@ -18,3 +18,5 @@ if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 
 delete_option('picatic_settings');
 delete_option('picatic_settings_cache');
+delete_option('widget_picatic_upcoming_events_widget');
+delete_option('widget_picatic_sell_tickets_widget');

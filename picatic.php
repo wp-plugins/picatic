@@ -79,7 +79,7 @@ class Picatic_Sell_Tickets_Widget extends WP_Widget {
     //get the access key from wp_options table.
     //it can be set from Picatic Options page or Widgets
     // 3 indexs are access_key, auth_options, user_id
-    $this->access_key_check = get_option( 'picatic-settings' );
+    $this->access_key_check = get_option( 'picatic_settings' );
   }
 
 
@@ -115,7 +115,7 @@ class Picatic_Sell_Tickets_Widget extends WP_Widget {
       $result_user = $user->getValues();
 
       if ( isset( $result_user['id'] ) ) {
-        update_option( 'picatic-settings' , array(
+        update_option( 'picatic_settings' , array(
                 'access_key' => strip_tags($new_instance['auth_access_key']) ,
                 'auth_options' => '1' ,
                 'user_id' => $result_user['id'] ,
@@ -155,7 +155,7 @@ class Picatic_Sell_Tickets_Widget extends WP_Widget {
      //--- Display the widget starts here -----------------------------
 
     // check exist access key before displaying the widget on the theme
-    $get_settings = get_option( 'picatic-settings' );
+    $get_settings = get_option( 'picatic_settings' );
     if ( strlen( $get_settings['access_key'] ) > 0 && strlen( $event ) > 0) {
       include('picatic-sellwidget.php');
     }
@@ -191,7 +191,7 @@ class Picatic_Upcoming_Events_Widget extends WP_Widget
     //get the access key from wp_options table.
     //it can be set from Picatic Options page or Widgets
     // 3 indexs are access_key, auth_options, user_id
-    $this->access_key_check = get_option( 'picatic-settings' );
+    $this->access_key_check = get_option( 'picatic_settings' );
   }
 
 
@@ -241,7 +241,7 @@ class Picatic_Upcoming_Events_Widget extends WP_Widget
       $result_user = $user->getValues();
 
       if ( isset( $result_user['id'] ) ) {
-        update_option( 'picatic-settings' , array(
+        update_option( 'picatic_settings' , array(
                 'access_key' => strip_tags($new_instance['auth_access_key']) ,
                 'auth_options' => '1' ,
                 'user_id' => $result_user['id'] ,
@@ -277,7 +277,7 @@ class Picatic_Upcoming_Events_Widget extends WP_Widget
     //--- Display the widget starts here -----------------------------
 
     // check exist access key before displaying the widget on the theme
-    $get_settings = get_option( 'picatic-settings' );
+    $get_settings = get_option( 'picatic_settings' );
     if ( strlen( $get_settings['access_key'] ) > 0 && strlen( $get_settings['user_id'] ) > 0) {
       include('picatic-eventswidget.php');
     }

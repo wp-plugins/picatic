@@ -147,7 +147,7 @@ class PicaticLib {
 
   public static function timeType($fundingSeconds) {
     if ( $fundingSeconds <= 0 || is_nan($fundingSeconds) ) {
-      $timeType = 'Minutes';
+      $timeType = __('Minutes', 'Picatic_Sell_Tickets_Widget_plugin');
       return $timeType;
     }
 
@@ -157,15 +157,15 @@ class PicaticLib {
     $divisorForMinutes = $fundingSeconds % (60 * 60);
     $minutes = strval( floor($divisorForMinutes / 60) );
 
-    $timeType = 'Days';
+    $timeType = __('Days', 'Picatic_Sell_Tickets_Widget_plugin');
     if ( $days === '1' ) {
-      $timeType = 'Day';
+      $timeType = __('Day', 'Picatic_Sell_Tickets_Widget_plugin');
     } else if ( $days === '0' ) {
-      $timeType = 'Hours';
+      $timeType = __('Hours', 'Picatic_Sell_Tickets_Widget_plugin');
       if ( $hours === '1' ) {
-        $timeType = 'Hour';
+        $timeType = __('Hour', 'Picatic_Sell_Tickets_Widget_plugin');
       } else if ( $hours === '0' ) {
-        $timeType = 'Minutes';
+        $timeType = __('Minutes', 'Picatic_Sell_Tickets_Widget_plugin');
         if ( $minutes === '1' ) {
           $timeType = 'Minute';
         }
@@ -182,7 +182,7 @@ class PicaticLib {
    * @return [type] [description]
    */
   public static function getFactory() {
-    $getOptions = get_option( 'picatic-settings' );
+    $getOptions = get_option( 'picatic_settings' );
     // call events Api
     $picaticInstance = PicaticAPI::instance();
     $picaticInstance->setApiKey( $getOptions['access_key'] );
@@ -198,7 +198,7 @@ class PicaticLib {
     if ($events !== false) {
       return $events;
     }
-    $getOptions = get_option( 'picatic-settings' );
+    $getOptions = get_option( 'picatic_settings' );
     $events = PicaticLib::getFactory()->modelCreate('Event')->findAll(array(
       'user_id' => $getOptions['user_id'] ,
       'status' => 'active' ,
@@ -222,9 +222,9 @@ class PicaticLib {
     if ($events !== false) {
       return $events;
     }
-    $getOptions = get_option( 'picatic-settings' );
+    $getOptions = get_option( 'picatic_settings' );
     $events  =PicaticLib::getFactory()->modelCreate('Event')->findAll(array(
-      'user_id' => $getOptions['user_id'] ,
+      'user_id' => $getOptions['user_id'],
       'status' => 'active',
       'extend' => 'venue_region,venue_country,currency',
       'fields' => 'id,title,status,type,crowd_funded,cover_image_uri,slug,start_date,start_time,end_date,end_time,venue_street,venue_locality,venue_region_id,venue_country_id,summary,description,funding_seconds,funding_successful,funding_goal,funding_total,funding_contributors,_venue_region,_venue_country,_currency'

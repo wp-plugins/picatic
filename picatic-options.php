@@ -24,7 +24,7 @@ function picatic_settings_authorization_init() {
   // Register Sections
   add_settings_section(
     'picatic_authentication_section',
-    __( 'Authentication', 'picatic' ),
+    __( 'Authentication', 'Picatic_Sell_Tickets_Widget_plugin' ),
     'picatic_settings_authentication_section_callback',
     'picatic_settings_authorization'
   );
@@ -32,7 +32,7 @@ function picatic_settings_authorization_init() {
   // Register Fields
   add_settings_field(
     'picatic_authentication_status',
-    __( 'Status', 'picatic' ),
+    __( 'Status', 'Picatic_Sell_Tickets_Widget_plugin' ),
     'picatic_authentication_status_render',
     'picatic_settings_authorization',
     'picatic_authentication_section'
@@ -49,7 +49,7 @@ function picatic_settings_cache_init() {
   // Register Sections
   add_settings_section(
     'picatic_cache_section',
-    __( 'Cache', 'picatic' ),
+    __( 'Cache', 'Picatic_Sell_Tickets_Widget_plugin' ),
     'picatic_settings_cache_section_callback',
     'picatic_settings_cache'
   );
@@ -58,7 +58,7 @@ function picatic_settings_cache_init() {
 
   add_settings_field(
     'picatic_cache',
-    __( 'Cache', 'picatic' ),
+    __( 'Cache', 'Picatic_Sell_Tickets_Widget_plugin' ),
     'picatic_cache_render',
     'picatic_settings_cache',
     'picatic_cache_section'
@@ -66,7 +66,7 @@ function picatic_settings_cache_init() {
 
   add_settings_field(
     'picatic_cache_duration',
-    __( 'Cache Duration', 'picatic' ),
+    __( 'Cache Duration', 'Picatic_Sell_Tickets_Widget_plugin' ),
     'picatic_cache_duration_render',
     'picatic_settings_cache',
     'picatic_cache_section'
@@ -75,11 +75,11 @@ function picatic_settings_cache_init() {
 }
 
 function picatic_settings_authentication_section_callback() {
-  echo __( 'Authenticate yourself with the Picatic plugin using an API key from Picatic.', 'picatic' );
+  echo __( 'Authenticate yourself with the Picatic plugin using an API key from Picatic.', 'Picatic_Sell_Tickets_Widget_plugin' );
 }
 
 function picatic_settings_cache_section_callback() {
-  echo __( 'Caching will improve how quickly the Picatic widgets load.', 'picatic' );
+  echo __( 'Caching will improve how quickly the Picatic widgets load.', 'Picatic_Sell_Tickets_Widget_plugin' );
 }
 
 function picatic_authentication_status_render() {
@@ -87,7 +87,7 @@ function picatic_authentication_status_render() {
   if( isset( $options['access_key'] ) && ( strlen(trim( $options['access_key'] )) > 0 ) ) {
   ?>
 
-    <p><?php echo __( 'Authenticated as' ); ?> <?php echo $options['user_name']; ?></p>
+    <p><?php _e( 'Authenticated as', 'Picatic_Sell_Tickets_Widget_plugin' ); ?> <?php echo $options['user_name']; ?></p>
     <p>
       <?php submit_button( 'Remove' , 'primary' , 'submit-form', false); ?>
     </p>
@@ -100,9 +100,9 @@ function picatic_authentication_status_render() {
   } else {
   ?>
     <p>
-      <input type="text" name="picatic_settings[access_key]" value="" placeholder="<?php echo __( 'Enter your access key' ); ?>" />
+      <input type="text" name="picatic_settings[access_key]" value="" placeholder="<?php _e( 'Enter your access key', 'Picatic_Sell_Tickets_Widget_plugin' ); ?>" />
     </p>
-    <p><?php echo __( 'Get an' ); ?> <a href="https://www.picatic.com/manage/users/applications/?utm_source=wordpress&utm_medium=integrations&utm_campaign=picatic%20for%20wordpress" target="_blank"><?php echo __( 'API key' ); ?></a>.</p>
+    <p><?php _e( 'Get an', 'Picatic_Sell_Tickets_Widget_plugin' ); ?> <a href="https://www.picatic.com/manage/users/applications/?utm_source=wordpress&utm_medium=integrations&utm_campaign=picatic%20for%20wordpress" target="_blank"><?php _e( 'API key', 'Picatic_Sell_Tickets_Widget_plugin' ); ?></a>.</p>
 
     <?php // hidden fields ?>
     <input type="hidden" name="picatic_settings[auth_options]" value="1" id="auth-options">
@@ -119,12 +119,12 @@ function picatic_cache_render() {
   <p>
     <label>
       <input type="radio" id="picatic_cache_on" name="picatic_settings_cache[cache]" value="1" <?php checked( $options['cache'], 1); ?> />
-      <?php echo __( 'On' ); ?>
+      <?php _e( 'On', 'Picatic_Sell_Tickets_Widget_plugin' ); ?>
     </label>
     <br>
     <label>
       <input type="radio" id="picatic_cache_off" name="picatic_settings_cache[cache]" value="0" <?php checked( $options['cache'], 0); ?> />
-      <?php echo __( 'Off' ); ?>
+      <?php _e( 'Off', 'Picatic_Sell_Tickets_Widget_plugin' ); ?>
     </label>
   </p>
   <?php
@@ -135,7 +135,7 @@ function picatic_cache_duration_render() {
   if ( empty($options['cache_duration']) ) { $options['cache_duration'] = '3600'; }
   ?>
   <p>
-    <input type="text" name="picatic_settings_cache[cache_duration]" value="<?php echo $options['cache_duration']; ?>" placeholder="<?php echo __( 'seconds' ); ?>"/>
+    <input type="text" name="picatic_settings_cache[cache_duration]" value="<?php echo $options['cache_duration']; ?>" placeholder="<?php _e( 'seconds', 'Picatic_Sell_Tickets_Widget_plugin' ); ?>"/>
   </p>
   <?php
 }
@@ -231,16 +231,16 @@ function save_picatic_cache_options( $data ) {
     if ( false === get_option('picatic_settings_cache') ) {
       $output = $data;
       $type = 'updated';
-      $message = __( 'Successfully saved', 'picatic' );
+      $message = __( 'Successfully saved', 'Picatic_Sell_Tickets_Widget_plugin' );
     } else {
       $output = $data;
       $type = 'updated';
-      $message = __( 'Successfully updated', 'picatic' );
+      $message = __( 'Successfully updated', 'Picatic_Sell_Tickets_Widget_plugin' );
     }
   } else {
     $output = get_option('picatic_settings_cache');
     $type = 'error';
-    $message = __( 'Duration can not be empty', 'picatic' );
+    $message = __( 'Duration can not be empty', 'Picatic_Sell_Tickets_Widget_plugin' );
   }
 
   add_settings_error(
