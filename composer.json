@@ -1,0 +1,17 @@
+{
+    "name": "picatic/wordpress-plugin",
+    "description": "Wordpress Plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Picatic and Contributors",
+            "email": "api@picatic.com"
+        }
+    ],
+    "require": {
+        "picatic/php-api": "1.0.*"
+    },
+    "config": {
+        "preferred-install": "dist"
+    }
+}
