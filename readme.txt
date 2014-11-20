@@ -1,6 +1,6 @@
 === Picatic ===
 Contributors: picatic
-Tags: events, ticket, picatic, event listing, shortcode, event, event management, venue, conference
+Tags: events, ticket, picatic, event listing, shortcode, event, event management, venue, conference, sell tickets, event registration
 Requires at least: 3.7
 Tested up to: 4.1
 Stable tag: 1.0
@@ -25,7 +25,7 @@ Features Included:
 == Installation ==
 
 1. Install this plugin from the wordpress directory.
-1. Obtain an API key from your Picatic.com account from here: https://www.picatic.com/manage/users/applications
+1. Obtain an API key from your Picatic.com account from here: [https://www.picatic.com/manage/users/applications](https://www.picatic.com/manage/users/applications/?utm_source=wordpress&utm_medium=integrations&utm_campaign=picatic%20for%20wordpress "Obtain an API key from Picatic.com")
 1. Enter your API key under the plugins options section
 
 == Frequently Asked Questions ==

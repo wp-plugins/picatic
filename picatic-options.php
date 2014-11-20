@@ -102,7 +102,7 @@ function picatic_authentication_status_render() {
     <p>
       <input type="text" name="picatic_settings[access_key]" value="" placeholder="<?php echo __( 'Enter your access key' ); ?>" />
     </p>
-    <p><?php echo __( 'Get an' ); ?> <a href="https://www.picatic.com/manage/users/applications" target="_blank"><?php echo __( 'API key' ); ?></a>.</p>
+    <p><?php echo __( 'Get an' ); ?> <a href="https://www.picatic.com/manage/users/applications/?utm_source=wordpress&utm_medium=integrations&utm_campaign=picatic%20for%20wordpress" target="_blank"><?php echo __( 'API key' ); ?></a>.</p>
 
     <?php // hidden fields ?>
     <input type="hidden" name="picatic_settings[auth_options]" value="1" id="auth-options">
