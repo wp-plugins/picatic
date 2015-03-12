@@ -58,7 +58,7 @@ $widget_settings = get_option( 'widget_picatic_sell_tickets_widget' );
                 continue;
               }
             } else {
-              if ( $currentTicket['type'] !== 'regular' ) {
+              if ( !in_array($currentTicket['type'], array('regular', 'free')) ) {
                 continue;
               }
             }

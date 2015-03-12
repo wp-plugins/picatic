@@ -5,7 +5,6 @@
 
   TABLE OF CONTENTS
 
-  00 - Fonts
   01 - Mixins/Variables
   02 - Bases
   03 - Utilities
@@ -16,43 +15,6 @@
   08 - Mobile
 
 ========================================================================== */
-/* ==========================================================================
-  00 - Fonts
-========================================================================== */
-/*
-    font-family: 'ProximaNovaLtRegular';
-    font-family: 'ProximaNovaRgRegular';
-    font-family: 'ProximaNovaLtBold';
-    font-family: 'ProximaNovaRgBold';
-  */
-@font-face {
-  font-family: 'ProximaNovaLtRegular';
-  src: url('https://www.picatic.com/fonts/proximanova-light-webfont.eot');
-  src: url('https://www.picatic.com/fonts/proximanova-light-webfont.eot?#iefix') format('embedded-opentype'), url('https://www.picatic.com/fonts/proximanova-light-webfont.woff') format('woff'), url('https://www.picatic.com/fonts/proximanova-light-webfont.ttf') format('truetype'), url('https://www.picatic.com/fonts/proximanova-light-webfont.svg#ProximaNovaRgRegular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'ProximaNovaRgRegular';
-  src: url('https://www.picatic.com/fonts/proximanova-reg-webfont.eot');
-  src: url('https://www.picatic.com/fonts/proximanova-reg-webfont.eot?#iefix') format('embedded-opentype'), url('https://www.picatic.com/fonts/proximanova-reg-webfont.woff') format('woff'), url('https://www.picatic.com/fonts/proximanova-reg-webfont.ttf') format('truetype'), url('https://www.picatic.com/fonts/proximanova-reg-webfont.svg#ProximaNovaRgRegular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'ProximaNovaLtBold';
-  src: url('https://www.picatic.com/fonts/proximanova-semibold-webfont.eot');
-  src: url('https://www.picatic.com/fonts/proximanova-semibold-webfont.eot?#iefix') format('embedded-opentype'), url('https://www.picatic.com/fonts/proximanova-semibold-webfont.woff') format('woff'), url('https://www.picatic.com/fonts/proximanova-semibold-webfont.ttf') format('truetype'), url('https://www.picatic.com/fonts/proximanova-semibold-webfont.svg#ProximaNovaLtBold') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'ProximaNovaRgBold';
-  src: url('https://www.picatic.com/fonts/proximanova-bold-webfont.eot');
-  src: url('https://www.picatic.com/fonts/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'), url('https://www.picatic.com/fonts/proximanova-bold-webfont.woff') format('woff'), url('https://www.picatic.com/fonts/proximanova-bold-webfont.ttf') format('truetype'), url('https://www.picatic.com/fonts/proximanova-bold-webfont.svg#ProximaNovaRgBold') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
 /* ==========================================================================
   01 - Mixins/Variables
 ========================================================================== */
@@ -79,7 +41,7 @@ div.ptw {
   padding: 0 10px;
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
-  font-family: 'ProximaNovaRgRegular', sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
 }
@@ -117,8 +79,8 @@ div.ptw {
 .ptw h2 {
   color: #000000;
   margin: 0;
-  font-family: 'ProximaNovaLtRegular';
-  font-weight: normal;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 100;
   font-style: normal;
 }
 .ptw p {
@@ -142,7 +104,7 @@ div.ptw {
   transition: border linear 0.2s, box-shadow linear 0.2s;
   vertical-align: middle;
   width: 210px;
-  font-family: 'ProximaNovaRgRegular', sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
 }
@@ -159,7 +121,7 @@ div.ptw {
   padding: 4px;
   vertical-align: middle;
   width: 220px;
-  font-family: 'ProximaNovaRgRegular', sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
 }
@@ -226,7 +188,7 @@ div.ptw {
   text-transform: none;
   vertical-align: middle;
   -webkit-font-smoothing: antialiased;
-  font-family: 'ProximaNovaRgRegular', sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
 }
@@ -264,8 +226,8 @@ div.ptw {
   padding: 16px 20px;
   text-transform: uppercase;
   width: auto;
-  font-family: 'ProximaNovaLtBold', sans-serif;
-  font-weight: normal;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
   font-style: normal;
 }
 .ptw .btn-teal {
@@ -314,7 +276,7 @@ div.ptw {
   letter-spacing: -1px;
   margin-bottom: 0;
   padding-top: 20px;
-  font-family: 'ProximaNovaRgRegular', sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
 }
@@ -344,15 +306,15 @@ div.ptw {
   padding-right: 10px;
   padding-top: 5px;
   width: 170px;
-  font-family: 'ProximaNovaRgBold', sans-serif;
-  font-weight: normal;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
   font-style: normal;
 }
 .ptw .ptw-ticket-price span span {
   color: #555;
   font-size: 13px;
-  font-family: 'ProximaNovaLtBold', sans-serif;
-  font-weight: normal;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
   font-style: normal;
 }
 .ptw .ptw-ticket-price .ptw-ticket-discount {
@@ -360,8 +322,8 @@ div.ptw {
   font-size: 16px;
   vertical-align: middle;
   white-space: nowrap;
-  font-family: 'ProximaNovaLtBold', sans-serif;
-  font-weight: normal;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
   font-style: normal;
 }
 .ptw .ptw-ticket-quantity {
@@ -383,8 +345,8 @@ div.ptw {
   color: #000000;
   font-size: 18px;
   margin-bottom: 0;
-  font-family: 'ProximaNovaLtBold', sans-serif;
-  font-weight: normal;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
   font-style: normal;
 }
 .ptw .ptw-ticket-perk {
@@ -397,8 +359,8 @@ div.ptw {
   font-size: 16px;
   margin-bottom: 0;
   text-transform: uppercase;
-  font-family: 'ProximaNovaRgBold', sans-serif;
-  font-weight: normal;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
   font-style: normal;
 }
 .ptw .ptw-ticket-buyers {
@@ -409,14 +371,14 @@ div.ptw {
   font-size: 13px;
   padding: 0;
   text-transform: uppercase;
-  font-family: 'ProximaNovaLtBold', sans-serif;
-  font-weight: normal;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
   font-style: normal;
 }
 .ptw .ptw-tickets-claimed span {
   color: #000000;
-  font-family: 'ProximaNovaRgBold', sans-serif;
-  font-weight: normal;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
   font-style: normal;
 }
 .ptw .ptw-donations {
@@ -438,8 +400,8 @@ div.ptw {
   font-size: 18px;
   line-height: 18px;
   margin: 6px 0 10px;
-  font-family: 'ProximaNovaLtBold', sans-serif;
-  font-weight: normal;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
   font-style: normal;
 }
 .ptw .ptw-donation-name + p {
@@ -482,8 +444,8 @@ div.ptw {
   font-size: 18px;
   line-height: 18px;
   margin: 6px 0 10px;
-  font-family: 'ProximaNovaLtBold', sans-serif;
-  font-weight: normal;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
   font-style: normal;
 }
 .ptw .ptw-tpd .control-group {
@@ -555,8 +517,8 @@ div.ptw {
   text-align: left;
   text-transform: none;
   vertical-align: bottom;
-  font-family: 'ProximaNovaLtBold', sans-serif;
-  font-weight: normal;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
   font-style: normal;
 }
 .ptw .ptw-table td {
@@ -605,8 +567,8 @@ div.ptw {
 }
 .ptw.ptw-wide .ptw-wide-ticket-name {
   font-size: 14px;
-  font-family: 'ProximaNovaRgBold', sans-serif;
-  font-weight: normal;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
   font-style: normal;
 }
 .ptw.ptw-wide .perk-title {
@@ -615,8 +577,8 @@ div.ptw {
   line-height: 14px;
   margin: 0;
   text-transform: uppercase;
-  font-family: 'ProximaNovaRgBold', sans-serif;
-  font-weight: normal;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
   font-style: normal;
 }
 .ptw.ptw-wide .ptw-wide-ticket-quantity select {
@@ -657,7 +619,7 @@ div.ptw {
   color: #f2f2f2;
 }
 .ptw.ptw-wide.ptw-dark h2 {
-  font-family: 'ProximaNovaRgRegular', sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
 }

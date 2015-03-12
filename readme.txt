@@ -3,7 +3,7 @@ Contributors: picatic
 Tags: events, ticket, picatic, event listing, shortcode, event, event management, venue, conference, sell tickets, event registration
 Requires at least: 3.7
 Tested up to: 4.1
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 License: MIT
 License URI: http://opensource.org/licenses/MIT
 
@@ -50,6 +50,10 @@ You sure do, but accounts are free so give us a try.
 8. **Upcoming Events** - How your upcoming events are displayed with default styling.
 
 == Changelog ==
+
+= 1.1.2 =
+* Free tickets now appear
+* Fixed font dependency
 
 = 1.1.1 =
 * tweaked so the update shows up

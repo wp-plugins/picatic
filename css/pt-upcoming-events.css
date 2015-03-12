@@ -37,7 +37,7 @@
     border-radius: 5px;
     color: #535353;
     float: left;
-    font-family: 'ProximaNovaRgRegular', sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: normal;
     font-style: normal;
     margin-bottom: 20px;
@@ -77,8 +77,8 @@
     line-height: 1.42857143;
     margin: 8px 0 8px !important;
     overflow: hidden;
-    font-family: 'ProximaNovaRgBold';
-    font-weight: normal;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: bold;
     font-style: normal;
   }
   .pt-event-box .pt-event-box-content .pt-event-box-title a {
@@ -148,8 +148,8 @@
     margin: 0;
     text-align: center;
     text-transform: uppercase;
-    font-family: 'ProximaNovaRgBold';
-    font-weight: normal;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: bold;
     font-style: normal;
   }
   .pt-event-box-countdown-failure {
@@ -159,8 +159,8 @@
     margin: 0;
     text-align: center;
     text-transform: uppercase;
-    font-family: 'ProximaNovaLtBold';
-    font-weight: normal;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: lighter;
     font-style: normal;
   }
   .pt-event-box-tickets-left {
@@ -169,8 +169,8 @@
     padding-bottom: 5px;
     text-align: center;
     text-transform: uppercase;
-    font-family: 'ProximaNovaRgBold';
-    font-weight: normal;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: bold;
     font-style: normal;
   }
   .pt-event-box-tilt-progress.progress {
@@ -220,8 +220,8 @@
     color: #000000;
     font-size: 14px;
     display: block;
-    font-family: 'ProximaNovaRgBold';
-    font-weight: normal;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: bold;
     font-style: normal;
   }
   .pt-event-box-cf-funded {
