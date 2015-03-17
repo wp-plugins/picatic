@@ -1,0 +1,649 @@
+/* ==========================================================================
+  Picatic Widget Styles
+========================================================================== */
+/* ==========================================================================
+
+  TABLE OF CONTENTS
+
+  01 - Mixins/Variables
+  02 - Bases
+  03 - Utilities
+  04 - Widget
+  05 - Narrow Dark Widget
+  06 - Wide (auto) Widget
+  07 - Wide (auto) Dark Widget
+  08 - Mobile
+
+========================================================================== */
+/* ==========================================================================
+  01 - Mixins/Variables
+========================================================================== */
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+/* ==========================================================================
+  02 - Bases
+========================================================================== */
+div.ptw {
+  background: none #ffffff;
+  color: #333333;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0;
+  padding: 0 10px;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+.ptw a {
+  color: #f07002;
+  text-decoration: none;
+}
+.ptw a:active {
+  outline: 0;
+}
+.ptw a:hover {
+  color: #eb6e02;
+  outline: 0;
+  text-decoration: underline;
+}
+.ptw img {
+  border: 0;
+  max-width: 100%;
+  vertical-align: middle;
+  -ms-interpolation-mode: bicubic;
+}
+.ptw hr {
+  border: 0;
+  border-bottom: 1px solid #ffffff;
+  border-top: 1px solid #f2f2f2;
+  margin: 18px 0;
+}
+.ptw form {
+  margin: 0 0 18px;
+}
+.ptw h1 {
+  color: #000000;
+  margin: 0;
+}
+.ptw h2 {
+  color: #000000;
+  margin: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+.ptw p {
+  line-height: 24px;
+  margin: 0 0 9px;
+}
+.ptw input {
+  background-image: none;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  color: #333333;
+  display: inline-block;
+  font-size: 14px;
+  height: 28px;
+  line-height: 18px;
+  margin: 0;
+  padding: 4px;
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+  transition: border linear 0.2s, box-shadow linear 0.2s;
+  vertical-align: middle;
+  width: 210px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+.ptw .input-mini {
+  width: 60px;
+}
+.ptw select {
+  border: 1px solid #bbb;
+  color: #333333;
+  display: inline-block;
+  font-size: 14px;
+  height: 28px;
+  line-height: 28px;
+  padding: 4px;
+  vertical-align: middle;
+  width: 220px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+.ptw .input-prepend .add-on {
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  display: inline-block;
+  font-weight: normal;
+  height: 22px;
+  line-height: 22px;
+  margin-left: -1px;
+  margin-right: -1px;
+  min-width: 16px;
+  padding: 4px 5px;
+  text-align: center;
+  text-shadow: 0 1px 0 #ffffff;
+  vertical-align: middle;
+  width: auto;
+}
+.ptw .input-prepend .add-on:first-child {
+  border-radius: 3px 0 0 3px;
+}
+.ptw .input-prepend input {
+  border-radius: 0 3px 3px 0;
+  position: relative;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+.ptw .input-append {
+  margin-bottom: 5px;
+}
+.ptw .input-append input {
+  border-radius: 3px 0 0 3px;
+  display: inline-block;
+  margin-bottom: 0;
+  position: relative;
+  vertical-align: middle;
+  width: auto;
+}
+.ptw .input-append .btn {
+  margin-left: -1px;
+}
+.ptw .input-append .btn:last-child {
+  border-radius: 0 3px 3px 0;
+}
+.ptw button {
+  -webkit-appearance: button;
+}
+.ptw .btn {
+  background: none #aeaca2;
+  border: none;
+  border-radius: 4px;
+  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 16px;
+  margin: 0;
+  padding: 8px 16px 10px;
+  text-align: center;
+  text-shadow: none;
+  text-transform: none;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+.ptw .btn:active {
+  background: none #a09d92;
+  outline: 0;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.ptw .btn:hover,
+.ptw .btn:focus {
+  background: none #a9a79d;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25);
+  color: rgba(255, 255, 255, 0.9) !important;
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+.ptw .btn:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.ptw .btn-small {
+  font-size: 12px;
+  min-width: inherit;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+.ptw .btn-large {
+  border-radius: 4px;
+  box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.25);
+  font-size: 16px;
+  min-width: 210px;
+  padding: 16px 20px;
+  text-transform: uppercase;
+  width: auto;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+.ptw .btn-teal {
+  background: none #00be9c;
+  color: #ffffff;
+  box-shadow: inset 0 -2px 0 #00816a;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.ptw .btn-teal:active,
+.ptw .btn-teal:focus,
+.ptw .btn-teal:hover:active,
+.ptw .btn-teal:hover:focus {
+  background: none #009f83;
+}
+.ptw .btn-teal:hover {
+  background: none #00b494;
+}
+/* ==========================================================================
+  03 - Utilities
+========================================================================== */
+.ptw ::selection {
+  background: #f07002;
+  color: #ffffff;
+  text-shadow: none;
+}
+.ptw .align-right {
+  text-align: right !important;
+}
+.ptw .relative {
+  position: relative;
+}
+.ptw .pull-right {
+  float: right;
+}
+/* ==========================================================================
+  04 - Widget
+========================================================================== */
+.ptw {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.ptw h1 {
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -1px;
+  margin-bottom: 0;
+  padding-top: 20px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+.ptw h2 {
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: 20px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+}
+.ptw .ptw-powered-by {
+  text-align: center;
+  padding-bottom: 20px;
+}
+.ptw .ptw-powered-by a {
+  display: block;
+}
+.ptw .ptw-powered-by img {
+  vertical-align: text-bottom;
+  width: 60px;
+}
+.ptw .ptw-ticket-price {
+  color: #333333;
+  float: left;
+  font-size: 30px;
+  line-height: 20px;
+  padding-right: 10px;
+  padding-top: 5px;
+  width: 170px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+.ptw .ptw-ticket-price span span {
+  color: #555;
+  font-size: 13px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+.ptw .ptw-ticket-price .ptw-ticket-discount {
+  color: #aeaca2;
+  font-size: 16px;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+.ptw .ptw-ticket-quantity {
+  float: right;
+  width: 45px;
+}
+.ptw .ptw-ticket-quantity select {
+  margin: 0;
+  width: auto;
+}
+.ptw .ptw-ticket-info {
+  border-bottom: 1px dashed #ccc;
+  color: #555555;
+  font-size: 14px;
+  margin-bottom: 15px;
+  padding: 10px 0;
+}
+.ptw .ptw-ticket-info .ptw-ticket-name {
+  color: #000000;
+  font-size: 18px;
+  margin-bottom: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+.ptw .ptw-ticket-perk {
+  color: #555555;
+  font-size: 14px;
+  padding: 12px 0 12px;
+}
+.ptw .ptw-ticket-perk .perk-title {
+  color: #00be9c;
+  font-size: 16px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+.ptw .ptw-ticket-buyers {
+  padding: 15px 0 8px;
+}
+.ptw .ptw-tickets-claimed {
+  color: #999999;
+  font-size: 13px;
+  padding: 0;
+  text-transform: uppercase;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+.ptw .ptw-tickets-claimed span {
+  color: #000000;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+.ptw .ptw-donations {
+  border-bottom: 1px dashed #ccc;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  *zoom: 1;
+}
+.ptw .ptw-donations:before,
+.ptw .ptw-donations:after {
+  display: table;
+  content: "";
+}
+.ptw .ptw-donations:after {
+  clear: both;
+}
+.ptw .ptw-donation-name {
+  color: #000000;
+  font-size: 18px;
+  line-height: 18px;
+  margin: 6px 0 10px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+.ptw .ptw-donation-name + p {
+  color: #555555;
+  font-size: 14px;
+  margin: 0;
+}
+.ptw .ptw-donations-input {
+  float: right;
+  margin-left: 10px;
+}
+.ptw .ptw-donations-input input {
+  width: 60px !important;
+}
+.ptw .ptw-tpd {
+  border-bottom: 1px dashed #ccc;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  *zoom: 1;
+}
+.ptw .ptw-tpd:before,
+.ptw .ptw-tpd:after {
+  display: table;
+  content: "";
+}
+.ptw .ptw-tpd:after {
+  clear: both;
+}
+.ptw .ptw-tpd input {
+  width: 70%;
+}
+.ptw .ptw-tpd button {
+  width: 20%;
+}
+.ptw .ptw-tpd button:focus {
+  outline: none;
+}
+.ptw .ptw-tpd .ptw-tpd-name {
+  color: #000000;
+  font-size: 18px;
+  line-height: 18px;
+  margin: 6px 0 10px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+.ptw .ptw-tpd .control-group {
+  position: relative;
+}
+.ptw .ptw-table #submitTPD:focus {
+  outline: none;
+}
+.ptw .ptw-buy-button {
+  text-align: center;
+}
+/* ==========================================================================
+  05 - Narrow Dark Widget
+========================================================================== */
+.ptw .ptw-dark {
+  background-color: #1e1f21;
+  margin-left: -10px;
+  margin-right: -10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.ptw .ptw-dark h1,
+.ptw .ptw-dark h2 {
+  color: #ffffff;
+}
+.ptw .ptw-dark hr {
+  border-bottom-color: #535353;
+  border-top: none;
+}
+.ptw .ptw-dark .ptw-ticket-info,
+.ptw .ptw-dark .ptw-donations {
+  border-bottom-color: #535353;
+}
+.ptw .ptw-dark .ptw-ticket-info .ptw-ticket-name,
+.ptw .ptw-dark .ptw-tpd-name,
+.ptw .ptw-dark .ptw-donation-name,
+.ptw .ptw-dark .ptw-ticket-info,
+.ptw .ptw-dark .ptw-donation-name + p,
+.ptw .ptw-dark .ptw-ticket-price span span,
+.ptw .ptw-dark .ptw-ticket-perk,
+.ptw .ptw-dark .ptw-tickets-claimed {
+  color: #999999;
+}
+.ptw .ptw-dark .ptw-ticket-price,
+.ptw .ptw-dark .ptw-tickets-claimed span {
+  color: #f2f2f2;
+}
+/* ==========================================================================
+  06 - Wide (auto) Widget
+========================================================================== */
+.ptw .ptw-table {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #f2f2f2;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 13px;
+  line-height: 18px;
+  margin-bottom: 0;
+  max-width: 100%;
+  width: 100%;
+}
+.ptw .ptw-table:last-of-type {
+  margin-bottom: 10px;
+}
+.ptw .ptw-table th {
+  border: none;
+  padding: 4px 5px;
+  text-align: left;
+  text-transform: none;
+  vertical-align: bottom;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+.ptw .ptw-table td {
+  border: none;
+  border-top: 1px solid #f2f2f2;
+  font-size: 13px;
+  padding: 6px 5px;
+  text-align: left;
+  vertical-align: middle;
+}
+.ptw .ptw-table tbody tr:first-child td {
+  border-color: #ddd;
+}
+.ptw .ptw-table .no-border td {
+  border-top: none;
+  padding-top: 0;
+}
+.ptw .ptw-table .top-padding-6 td {
+  padding-top: 6px;
+}
+.ptw .ptw-table .input-prepend {
+  margin: 0;
+}
+.ptw .ptw-table .input-prepend .add-on {
+  padding: 2px 3px;
+}
+.ptw .ptw-table .input-prepend input {
+  font-size: 13px;
+  padding: 2px 4px;
+  width: 52px;
+}
+.ptw.ptw-wide h1 {
+  font-size: 24px;
+  line-height: 28px;
+}
+.ptw.ptw-wide h2 {
+  margin-bottom: 0;
+  padding-top: 10px;
+}
+.ptw.ptw-wide hr {
+  border-top: none;
+  margin: 5px 0 5px;
+}
+.ptw.ptw-wide form {
+  margin: 0;
+}
+.ptw.ptw-wide .ptw-wide-ticket-name {
+  font-size: 14px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+.ptw.ptw-wide .perk-title {
+  color: #00be9c;
+  font-size: 13px;
+  line-height: 14px;
+  margin: 0;
+  text-transform: uppercase;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+.ptw.ptw-wide .ptw-wide-ticket-quantity select {
+  font-size: 13px;
+  height: 22px;
+  line-height: 22px;
+  margin: 0;
+  padding: 0;
+}
+.ptw.ptw-wide .promo-code-input input {
+  max-width: calc(99% - 66px);
+}
+.ptw.ptw-wide .ptw-powered-by {
+  font-size: 13px;
+  line-height: 36px;
+  text-align: left;
+  padding-bottom: 20px;
+}
+.ptw.ptw-wide .ptw-powered-by a {
+  display: inline;
+}
+.ptw.ptw-wide .ptw-powered-by img {
+  vertical-align: text-bottom;
+  width: 60px;
+}
+/* ==========================================================================
+  07 - Wide (auto) Dark Widget
+========================================================================== */
+.ptw.ptw-wide.ptw-dark {
+  background-color: #1e1f21;
+  margin-left: -10px;
+  margin-right: -10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.ptw.ptw-wide.ptw-dark h1,
+.ptw.ptw-wide.ptw-dark h2 {
+  color: #f2f2f2;
+}
+.ptw.ptw-wide.ptw-dark h2 {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+.ptw.ptw-wide.ptw-dark hr {
+  border: none;
+}
+.ptw.ptw-wide.ptw-dark .ptw-table {
+  border-bottom-color: #535353;
+}
+.ptw.ptw-wide.ptw-dark .ptw-table th {
+  color: #ffffff;
+}
+.ptw.ptw-wide.ptw-dark .ptw-table td {
+  border-color: #535353;
+  color: #999999;
+}
+.ptw.ptw-wide.ptw-dark .ptw-powered-by {
+  color: #999999;
+}
+/* ==========================================================================
+  08 - Mobile
+========================================================================== */
+@media (max-width: 979px) {
+  .ptw .btn-large {
+    min-width: auto;
+  }
+}
