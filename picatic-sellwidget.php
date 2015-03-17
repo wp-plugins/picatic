@@ -77,8 +77,8 @@ $widget_settings = get_option( 'widget_picatic_sell_tickets_widget' );
               ?>
               <tr itemprop="tickets" itemscope itemtype="http://data-vocabulary.org/Offer">
                 <td class="ptw-wide-ticket-name">
-                  <input type="hidden" name="data[TicketPrice][$index][id]" value="<?php echo $currentTicket['id'] ?>">
-                  <input type="hidden" name="data[TicketPrice][$index][ticket_price_discount_id]" value="<?php echo $ticketPriceDiscountId; ?>">
+                  <input type="hidden" name="data[TicketPrice][<?php echo $index; ?>][id]" value="<?php echo $currentTicket['id'] ?>">
+                  <input type="hidden" name="data[TicketPrice][<?php echo $index; ?>][ticket_price_discount_id]" value="<?php echo $ticketPriceDiscountId; ?>">
                   <?php echo $currentTicket['name'] ?>
                 </td>
                 <td>
@@ -99,7 +99,7 @@ $widget_settings = get_option( 'widget_picatic_sell_tickets_widget' );
                 <td width="40">
                   <div class="ptw-wide-ticket-quantity">
                     <?php if($currentTicket['status'] == 'open') { ?>
-                      <select name="data[TicketPrice][$index][quantity]" class="input-mini" required="required">
+                      <select name="data[TicketPrice][<?php echo $index; ?>][quantity]" class="input-mini" required="required">
                       <?php
                       $ticketsMin = $currentTicket['min_quantity'];
                       $ticketsMax = ($currentTicket['max_quantity'] == 0) ? 20 : $currentTicket['max_quantity'];

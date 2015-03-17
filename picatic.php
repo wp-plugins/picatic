@@ -4,8 +4,8 @@
  * Plugin Name: Picatic
  * Plugin URI: http://URI_Of_Page_Describing_Plugin_and_Updates
  * Description: Integrate your Picatic event into your WordPress site
- * Version: 1.1.2
- * Stable tag: 1.1.2
+ * Version: 1.1.3
+ * Stable tag: 1.1.3
  * Author: Picatic E-Ticket Inc.
  * Author URI: https://www.picatic.com/
  * License: MIT
