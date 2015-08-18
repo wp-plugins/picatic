@@ -4,8 +4,8 @@
  * Plugin Name: Picatic
  * Plugin URI: http://URI_Of_Page_Describing_Plugin_and_Updates
  * Description: Integrate your Picatic event into your WordPress site
- * Version: 1.1.3
- * Stable tag: 1.1.3
+ * Version: 1.1.4
+ * Stable tag: 1.1.4
  * Author: Picatic E-Ticket Inc.
  * Author URI: https://www.picatic.com/
  * License: MIT
@@ -74,8 +74,8 @@ add_action( 'wp_enqueue_scripts', 'picatic_widget_CSS', 99 );
 class Picatic_Sell_Tickets_Widget extends WP_Widget {
 
   // constructor
-  function Picatic_Sell_Tickets_Widget() {
-    parent::WP_Widget(false, $name = __('Picatic: Sell Tickets', 'Picatic_Sell_Tickets_Widget_plugin') );
+  function __construct() {
+    parent::__construct(false, $name = __('Picatic: Sell Tickets', 'Picatic_Sell_Tickets_Widget_plugin') );
 
     //get the access key from wp_options table.
     //it can be set from Picatic Options page or Widgets
@@ -186,8 +186,8 @@ function picatic_process_widget() {
 class Picatic_Upcoming_Events_Widget extends WP_Widget
 {
   // constructor
-  function Picatic_Upcoming_Events_Widget() {
-    parent::WP_Widget(false, $name = __('Picatic: List Upcoming Events', 'Picatic_Upcoming_Events_Widget_plugin') );
+  function __construct() {
+    parent::__construct(false, $name = __('Picatic: List Upcoming Events', 'Picatic_Upcoming_Events_Widget_plugin') );
 
     //get the access key from wp_options table.
     //it can be set from Picatic Options page or Widgets

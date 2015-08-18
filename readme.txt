@@ -3,7 +3,7 @@ Contributors: picatic
 Tags: events, ticket, picatic, event listing, shortcode, event, event management, venue, conference, sell tickets, event registration
 Requires at least: 3.7
 Tested up to: 4.1
-Stable tag: 1.1.3
+Stable tag: 1.1.4
 License: MIT
 License URI: http://opensource.org/licenses/MIT
 
